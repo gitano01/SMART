@@ -1,0 +1,20 @@
+  
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: Smart_db
+  host: localhost
+  port: 5432
+  pool: 5
+  username: SMART
+  password: postgres
+
+production:
+  adapter: postgresql
+  encoding: utf8
+  database: postgres_db_production
+  host: localhost
+  pool: 5
+  port: 5432
+  username: SMART
+  password: postgres
