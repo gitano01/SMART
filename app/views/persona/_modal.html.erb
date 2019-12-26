@@ -1,0 +1,28 @@
+<div id="modal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><h5 class="text-center">Datos del usuario</h5><br/></h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+      </div>
+      <%= form_tag :action=>:create do %>
+        <div class="modal-body">
+          <%= render :partial => 'formPersona' %>
+        </div>
+        <div class="modal-footer">
+          <div class="text-center">
+            <small>Nota: Los campos marcados con * son obligatorios</small><br/><br/>
+            <%= submit_tag "Guardar" ,class: 'btn btn-sm btn-primary' %>
+            <a href="/persona">
+              <button class="btn btn-sm btn-danger">
+                Cancelar
+              </button>
+            </a>
+
+          </div><br/><br/>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

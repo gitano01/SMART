@@ -1,27 +1,40 @@
+<br>
 
-<div>
-    <%= link_to 'Nuevo', new_persona_path, class: 'btn btn-sm btn-primary' %>
+<div class="col-11 text-right">
+  <a href="/persona/new" data-remote="true">
+  <button  class=" col-2 btn btn-outline-primary">
+    <i class="fa fa-user" aria-hidden="true" style="margin-right: 10px;"></i>Agregar
+  </button>
+  </a>
+
 </div>
 
+<br>
+
 <%if @personas.size > 0 %>
-    <table>
-        <thead>
-            <td>Id</td>
-            <td>Nombre</td>
-            <td>Apellido</td>
-            <td>Edad</td>
+  <div class="d-flex justify-content-center">
+    <table class="table col-10 ">
+        <thead >
+          <tr>
+              <th >Id</th>
+              <th >Nombre</th>
+              <th >Apellido</th>
+              <th >Edad</th>
+          </tr>
         </thead>
-        <tbody>
+        <tbody >
           <% @personas.each do |p|%>  
             <tr>
-                <td><%= p.id %></td>
-                <td><%= p.nombre %></td>
-                <td><%= p.apellido %></td>
-                <td><%= p.edad %></td>
+                <td class="font-weight-bold"><%= p.id %></td>
+                <td ><%= p.nombre %></td>
+                <td ><%= p.apellido %></td>
+                <td ><%= p.edad %></td>
             </tr>
           <%end%>      
         </tbody>
     </table>
+  </div>
 <%else%>
 <div>No hay registros morro</div>
 <%end%>
+<%= render :partial => 'modal' %>

@@ -1,32 +1,10 @@
-<div class="center">
-		<%= form_tag :action=>:create do %>
-			<div class="row">
-				<div class="col-md-10">
-					<h5 class="text-center">Datos del usuario</h5><br/>
-						<table  class="table table-sm">
-							<tr>
-								<td width="40%"><label>Nombre*</label></br><small>Nombre de Persona</small></td>
-								<td><%= text_field :persona, :nombre, class: 'form-control', maxlength: 20, onkeypress: 'return validarUsuario(event, this)'%>
-								
-							</tr>
-							<tr>
-								<td width="40%"><label>Apellido*</label></br><small>Apellidos</small></td>
-								<td><%= text_field :persona, :apellido, class: 'form-control', maxlength: 35%>
-								
-							</tr>
-							<tr>
-								<td width="40%"><label>Edad*</label></br><small>Edad</small></td>
-								<td><%= number_field :persona, :edad, class: 'form-control', maxlength: 35%>
-								
-							</tr>
-						</table>
-				</div>
-				
-			</div>
-			<div class="text-center">
-				<small>Nota: Los campos marcados con * son obligatorios</small><br/><br/>
-				<%= submit_tag "Guardar" ,class: 'btn btn-sm btn-primary' %>
-				<%= link_to "Cancelar", '#', class: 'btn btn-sm btn-danger' %>
-			</div><br/><br/>
-		<% end %>
+<div class="container">
+  <div class="abs-center">
+      <div class="d-flex col-sm-12 justify-content-center">
+
+              <%= render :partial => "formPersona" %>
+
+      </div>
+  </div>
+
 </div>

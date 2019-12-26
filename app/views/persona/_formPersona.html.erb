@@ -1,0 +1,21 @@
+<br>
+  <div class="col-12 row d-flex align-items-center justify-content-center">
+
+    <table  class="table-sm">
+      <tr>
+        <td width="40%"><label>Nombre*</label></br><small>Nombre de Persona</small></td>
+        <td><%= text_field :persona, :nombre, class: 'form-control', maxlength: 20, onkeypress: 'return validarUsuario(event, this)'%>
+
+      </tr>
+      <tr>
+        <td width="40%"><label>Apellido*</label></br><small>Apellidos</small></td>
+        <td><%= text_field :persona, :apellido, class: 'form-control', maxlength: 35%>
+
+      </tr>
+      <tr>
+        <td width="40%"><label>Edad*</label></br><small>Edad</small></td>
+        <td><%= number_field :persona, :edad, class: 'form-control', maxlength: 35%>
+
+      </tr>
+    </table>
+  </div>
